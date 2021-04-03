@@ -10,6 +10,7 @@
 # bash
 # $ python detect.py --FILE_Image ./inference/images/ --trained_model model/YOLONT.pth --visual_threshold 0.02
 # ![Image](http://github.com/gasking/YOLONT/raw/master/images/output/bus.jpg)
+# ![Image](http://github.com/gasking/YOLONT/raw/master/images/output/kite.jpg)
 # 2. 训练需修改config里面的配置
 # VOC_ROOT=r'E:\YOLONT\VOCYOLO'
 # voc_ab = {
