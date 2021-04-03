@@ -1,4 +1,4 @@
-![image](http://github.com/gasking/YOLONT/raw/master/images/output/track.png)
+![Image text](http://github.com/gasking/YOLONT/raw/master/images/output/track.png)
 1. 推理文件 直接运行.detectpy
 $ python detect.py --Image  file.jpg  # image 
                       --video  file.mp4  # video
