@@ -1,3 +1,4 @@
+![image](http://github.com/gasking/YOLONT/raw/master/images/output/track.png)
 1. 推理文件 直接运行.detectpy
 $ python detect.py --Image  file.jpg  # image 
                       --video  file.mp4  # video
@@ -42,7 +43,6 @@ voc_ab = {
 # 运行train_voc.py
 
 3. track.py是YOLONT+deepsort的目标检测+目标追踪 demo
-  ![image](http://github.com/gasking/YOLONT/raw/master/images/output/track.png)
    增加注意力机制
 
 4. 精度
