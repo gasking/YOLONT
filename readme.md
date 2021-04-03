@@ -1,3 +1,6 @@
+# 需要下载YOLONT权重文件放在model文件夹下                                   链接: https://pan.baidu.com/s/1vTLu54RWcs4ZrH-Hy-cLxA 提取码: xxbx
+# 需下载ckpt.t7目标追踪权重 放在deep_sort\deep\checkpoint 文件夹下          链接: https://pan.baidu.com/s/173pB2t1U0flgn2d1JaT_zA 提取码: ermm
+
 # 1. 推理文件 直接运行.detectpy
    # $python detect.py --Image  file.jpg  # image 
    #    --video  file.mp4  # video
@@ -6,7 +9,7 @@
 # To run inference on examples in the `images/output` folder:
 # bash
 # $ python detect.py --FILE_Image ./inference/images/ --trained_model model/YOLONT.pth --visual_threshold 0.02
-![Image](http://github.com/gasking/YOLONT/raw/master/images/output/bus.jpg)
+# ![Image](http://github.com/gasking/YOLONT/raw/master/images/output/bus.jpg)
 # 2. 训练需修改config里面的配置
 # VOC_ROOT=r'E:\YOLONT\VOCYOLO'
 # voc_ab = {
