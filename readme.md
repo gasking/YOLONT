@@ -1,13 +1,13 @@
-![Image text](http://github.com/gasking/YOLONT/raw/master/images/output/track.png)
+![Image](http://github.com/gasking/YOLONT/raw/master/images/output/track.png)
 1. 推理文件 直接运行.detectpy
 $ python detect.py --Image  file.jpg  # image 
                       --video  file.mp4  # video
                       --FILE_Image ./dir  # directory
       
 To run inference on examples in the `images/output` folder:
-```bash
+bash
 $ python detect.py --FILE_Image ./inference/images/ --trained_model model/YOLONT.pth --visual_threshold 0.02
-
+![Image](http://github.com/gasking/YOLONT/raw/master/images/output/bus.jpg)
 2. 训练需修改config里面的配置
 <!-- VOC_ROOT=r'E:\YOLONT\VOCYOLO'
 voc_ab = {
