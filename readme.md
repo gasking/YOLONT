@@ -1,14 +1,14 @@
-![Image](http://github.com/gasking/YOLONT/raw/master/images/output/track.png)
-1. 推理文件 直接运行.detectpy
-$ python detect.py --Image  file.jpg  # image 
+#![Image](http://github.com/gasking/YOLONT/raw/master/images/output/track.png)
+#1. 推理文件 直接运行.detectpy
+#$ python detect.py --Image  file.jpg  # image 
                       --video  file.mp4  # video
                       --FILE_Image ./dir  # directory
       
-To run inference on examples in the `images/output` folder:
-bash
-$ python detect.py --FILE_Image ./inference/images/ --trained_model model/YOLONT.pth --visual_threshold 0.02
-![Image](http://github.com/gasking/YOLONT/raw/master/images/output/bus.jpg)
-2. 训练需修改config里面的配置
+#To run inference on examples in the `images/output` folder:
+#bash
+#$ python detect.py --FILE_Image ./inference/images/ --trained_model model/YOLONT.pth --visual_threshold 0.02
+#![Image](http://github.com/gasking/YOLONT/raw/master/images/output/bus.jpg)
+#2. 训练需修改config里面的配置
 <!-- VOC_ROOT=r'E:\YOLONT\VOCYOLO'
 voc_ab = {
     'num_classes': 20,
@@ -42,10 +42,10 @@ voc_ab = {
     'sheep', 'sofa', 'train', 'tvmonitor')  -->
 # 运行train_voc.py
 
-3. track.py是YOLONT+deepsort的目标检测+目标追踪 demo
+#3. track.py是YOLONT+deepsort的目标检测+目标追踪 demo
    增加注意力机制
 
-4. 精度
+#4. 精度
 分辨率     MAP(ap50)   flops/浮点运算次数 params/参数个数 model_size
 416X416     52.5%    1493393343            3571143b      13.7M
 512X512     60.05%   2262181632            3571143b      13.7M
