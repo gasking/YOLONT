@@ -45,9 +45,9 @@ example：
    增加注意力机制
     ![Image](http://github.com/gasking/YOLONT/raw/master/images/output/track.png)
 # 精度
- 分辨率     MAP(ap50)   flops/浮点运算次数 params/参数个数 model_size
- 416X416     52.5%    1493393343            3571143b      13.7M
- 512X512     60.05%   2262181632            3571143b      13.7M
- 618X618     58.9%    3190029567            3571143b      13.7M
+ # 分辨率     MAP(ap50)   flops/浮点运算次数 params/参数个数 model_size
+ # 416X416     52.5%    1493393343            3571143b      13.7M
+ # 512X512     60.05%   2262181632            3571143b      13.7M
+ # 618X618     58.9%    3190029567            3571143b      13.7M
  
 
