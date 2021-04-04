@@ -54,4 +54,7 @@
  # 512X512     60.05%   2262181632            3571143b      13.7M
  # 618X618     58.9%    3190029567            3571143b      13.7M
  
-感谢RangiLyu和Kissrabbit 两位大佬在复现工作的点拨
+感谢@RangiLyu和@Kissrabbit 两位大佬在复现工作的点拨
+RangiLyu https://zhuanlan.zhihu.com/p/306530300
+Kissrabbit https://www.zhihu.com/people/yang-jian-hua-63-91/posts
+欢迎大家star两位大佬的项目
