@@ -55,7 +55,3 @@
  # 618X618     58.9%    3190029567            3571143b      13.7M
  
 感谢@RangiLyu和@Kissrabbit、@qiuqiu 三位大佬在复现工作的点拨
-RangiLyu https://zhuanlan.zhihu.com/p/306530300
-Kissrabbit https://www.zhihu.com/people/yang-jian-hua-63-91/posts
-qiuqiu  https://www.zhihu.com/people/qiuqiuqiu-52
-欢迎大家star三位大佬的项目
