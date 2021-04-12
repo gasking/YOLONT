@@ -50,7 +50,7 @@
  # 512X512     60.05%   2262181632            3571143b      13.7M
  # 618X618     58.9%    3190029567            3571143b      13.7M
  
- #安装所需环境  pip  install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple
+# 安装所需环境  pip  install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple
  
 # 需要下载YOLONT权重文件放在model文件夹下                                   链接: https://pan.baidu.com/s/1vTLu54RWcs4ZrH-Hy-cLxA 提取码: xxbx
 # 需下载ckpt.t7目标追踪权重 放在deep_sort\deep\checkpoint 文件夹下          链接: https://pan.baidu.com/s/173pB2t1U0flgn2d1JaT_zA 提取码: ermm
