@@ -167,7 +167,7 @@ def inference():
             name=name[ids+1:]
             _=_pre(img=image.image,input_size=args.input_size)
             _net(net,device=device,input_size=args.input_size,thresh=args.visual_threshold,perdatas=_,image=name)
-    #prepare(net=net,device=device)
+    prepare(net=net,device=device)
 
 if __name__ == '__main__':
     inference()
