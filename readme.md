@@ -41,7 +41,7 @@
 #    'sheep', 'sofa', 'train', 'tvmonitor') 
 # 运行train_voc.py
 
-# track.py是YOLONT+deepsort的目标检测+目标追踪 demo
+# python detect.py --track True 可开启目标追踪demo
 #   增加注意力机制
 #   ![Image](http://github.com/gasking/YOLONT/raw/master/images/output/track.png)
 # 精度
