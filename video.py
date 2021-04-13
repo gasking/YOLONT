@@ -1,10 +1,14 @@
 import cv2,os,sys,argparse
 import  os.path as osp
-argvs=argparse.ArgumentParser(description="select function")
-argvs.add_argument("--video",default="",type=str,help="input video")
-argvs.add_argument("--FILE_Image",default="",type=str,help="input PATH_File")
-argvs.add_argument("--Image",default="",type=str,help="input Image")
-arga=argvs.parse_args()
+class arugement():
+  def __init__(self):
+    argvs=argparse.ArgumentParser(description="select function")
+    argvs.add_argument("--moive",default="",type=str,help="input video")
+    argvs.add_argument("--Dir_File",default="",type=str,help="input PATH_File")
+    argvs.add_argument("--photo",default="",type=str,help="input Image")
+    self.arga=argvs.parse_args()
+  def _get(self):
+      return self.arga
 class Video():
     def __init__(self,videofile):
         cv2.setNumThreads(32)
@@ -51,18 +55,19 @@ class pictrue_Image():
     def get(self):
         return cv2.imread(self.path)
 if __name__=="__main__":
-    if arga.video!='':
-        video=Video(videofile=arga.video)
+    arugements=arugement()._get()
+    if arugements.moive!='':
+        video=Video(videofile=arugements.moive)
         for image in iter(video):
             cv2.imshow("1",cv2.resize(image,(416,416)))
             cv2.waitKey(1)
-    elif arga.FILE_Image!='':
+    elif arugements.Dir_File!='':
         #r"K:\深度学习数据集\MOT数据集\test(1)\test\MOT20-07\img1"
-        Video=FILE_Image(arga.FILE_Image)
+        Video=FILE_Image(arugements.Dir_File)
         for image in iter(Video):
             cv2.imshow("1",cv2.resize(image,(416,416)))
             cv2.waitKey(1)
-    elif arga.Image!="":
-        image=pictrue_Image(arga.Image)
+    elif arugements.photo!="":
+        image=pictrue_Image(arugements.photo)
         cv2.imshow("1",cv2.resize(image,(416,416)))
         cv2.waitKey(1)
