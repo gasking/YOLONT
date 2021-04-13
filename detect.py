@@ -21,11 +21,11 @@ parser.add_argument('-v', '--version', default="YOLONT",
                     help='YOLONT')
 parser.add_argument('-d', '--dataset', default='VOC',
                     help='VOC  dataset')
-parser.add_argument('-size', '--input_size', default=608, type=int,
+parser.add_argument('-size', '--input_size', default=512, type=int,
                     help='Batch size for training')
 parser.add_argument('--trained_model', default='model/YOLONT.pth',
                     type=str, help='Trained state_dict file path to open')
-parser.add_argument('--visual_threshold', default=0.05, type=float,
+parser.add_argument('--visual_threshold', default=0.045, type=float,
                     help='Final confidence threshold')
 parser.add_argument("--video",default="",type=str,help="input video")
 parser.add_argument("--FILE_Image",default="",type=str,help="input PATH_File")
@@ -33,6 +33,7 @@ parser.add_argument("--Image",default="",type=str,help="input Image")
 parser.add_argument("--save",default="images/output",type=str,help="save's path")
 parser.add_argument("--mask",default=14,type=int,help="mask")
 parser.add_argument("--track",default=False,type=bool,help="build track")
+parser.add_argument("--delay",default=0,type=int,help="delay time")
 args = parser.parse_args()
 class tracks():
     def __init__(self):
@@ -67,7 +68,6 @@ class tracks():
         cls_conf = b[mask]
         # do tracking
         outputs = deepsorts.update(bbox_xywh, cls_conf, im0)
-        print(outputs)
         if len(outputs)!=0:
             bbox_tlwh = []
             bbox_xyxy = outputs[:, :4]
@@ -81,7 +81,7 @@ class tracks():
               draw.text((i[0]-50, i[1]-50), "ID:%s"%inds, (0, 255, 60), font=font) # 参数1：打印坐标，参数2：文本，参数3：字体颜色，参数4：字体
               im0=np.asarray(pilimg)
         cv2.imshow("1",cv2.resize(im0,(512,512)))            
-        cv2.waitKey(1)
+        cv2.waitKey(args.delay)
 tracks=tracks()
 def inference():
     # get device
@@ -142,8 +142,9 @@ def inference():
                 elif file_image!=None:
                  cv2.imwrite(os.path.join(args.save,file_image+'.jpg'),img_raw)
                 elif image!=None:
+                    print(os.path.join(args.save,image+'.jpg'))
                     cv2.imwrite(os.path.join(args.save,image+'.jpg'),img_raw)
-                cv2.waitKey(1)
+                cv2.waitKey(args.delay)
     def prepare(net=None,device=None):
         if args.video!='':
             print(args.video)
